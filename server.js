@@ -71,6 +71,9 @@ app.listen(app.get('port'), function () {
   // https://fdnd-agency.directus.app/items/dropandheal_exercise
   // https://fdnd-agency.directus.app/items/dropandheal_messages
 
+
+// Ophalen van data voor de opdrachten pagina
+
 app.get('/het-verlies-aanvaarden', async function (request, response) {
   const taskResponse = await fetch('https://fdnd-agency.directus.app/items/dropandheal_task/?filter={"id":1}')
   const exerciseResponse = await fetch('https://fdnd-agency.directus.app/items/dropandheal_exercise/?filter={"task":1}')
@@ -80,6 +83,18 @@ app.get('/het-verlies-aanvaarden', async function (request, response) {
   response.render('het-verlies-aanvaarden.liquid', {
     task: taskResponseJSON.data,
     exercise: exerciseResponseJSON.data
+  })
+})
+
+// Ophalen van data voor de community drops pagina
+
+app.get('/community-drops', async function (request, response) {
+  const dropsResponse = await fetch('https://fdnd-agency.directus.app/items/dropandheal_messages')
+  const dropsResponseJSON = await dropsResponse.json()
+
+  response.render('community-drops.liquid', {
+    title: "community-drops",
+    drops: dropsResponseJSON.data,
   })
 })
 
