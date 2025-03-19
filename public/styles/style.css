@@ -1,0 +1,248 @@
+:root {
+    --white: #f5f5f5;
+    --black: #111111;
+    --background-color: #181414;;
+    --gray: #A6A6A6;
+    --exercise-bg: #201c1c;
+    --header-bg: #0c0c0c;
+
+    /* colors */
+    --blue: #64AAC7;
+    --red: #984A4A;
+    --green: #6E9158;
+    --purple: #7C6097;
+    --default-bg: var(--black);
+    --theme: var(--blue);
+
+    /* fonts */
+    --calvino: Calvino, serif, Helvetica;
+    --figtree: Figtree, Tahoma, system-ui;
+
+    /* font sizes */
+    --size-xxl: 3.75rem;
+    --size-xl: 3rem;
+    --size-lg: 2.625rem;
+    --size-md: 2.5rem;
+    --size-sm: 2rem;
+    --size-s: 1.75rem;
+    --size-xs: 1.5rem;
+    --size-xxs: 1.25rem;
+    --size-default: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: var(--background-color);
+}
+
+.thumb {
+    width: 5%;
+}
+
+.nav-bar {
+    background-color: var(--header-bg);
+    padding: 40px 30px 30px 30px;
+    width: 100vw;
+    height: 30vw;
+    border-bottom: 1px solid #303030;
+    
+.progress-container {
+    margin-top: 10px;
+    width: 70%;
+    background: #222;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+  }
+  
+  .progress-bar {
+    display: block;
+    width: 10%; 
+    height: 100%;
+    background: #6aa6d8;
+    border-radius: 3px;
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: -8px;
+    right: -80px;
+    font-size: 12px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+        font-size: var(--size-sm);
+    }
+    }
+
+  .dropdown-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    }
+
+    .dropdown-btn.active {
+        transform: rotate(180deg); /* Draait de pijl als het menu opent */
+    }
+}
+
+.hero {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    position: relative;
+    padding: 30px 20px;
+    overflow-x: hidden;
+    .hero-img {
+        width: 16em;
+    }
+    .gradient-left, .gradient-right{
+        position: absolute;
+        width: 12em;
+        filter: blur(100px);
+        z-index: -1;
+        top: 25%;   
+    }
+    .gradient-left {
+        left: -25%;
+        /* display: none; */
+    }
+    .gradient-right {
+        right: -25%;
+        /* display: none; */
+    }
+    .hero-text{
+        margin: 40px 40px 0 40px;
+        h2 {
+            font-size: var(--size-s);
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            color: var(--gray);
+            font-size: var(--size-default);
+        }
+    }
+}
+
+.exercise-container {
+    background-color: var(--exercise-bg);
+    padding: 20px;
+    border-top: 1px solid var(--exercise-bg);
+    border-radius: 30px 30px 0 0;
+    ul {
+        list-style: none;
+        text-align: center;
+        align-items: center;
+    }
+    .end-text {
+        text-align: center;
+        padding: 40px;
+    }
+}
+
+.exercise-card {
+    width: 90vw;
+    background: black;
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gray);
+}
+
+.exercise-image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.start-button {
+    position: absolute;
+    top: 48%;
+    right: 10px;
+    background: #6aa6d8;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.start-button:hover {
+    background: #5b95c6;
+}
+
+.exercise-content {
+    padding: 15px;
+    h2 {
+        font-size: var(--size-xxs);
+        margin: 5px 0;
+    }
+}
+
+.exercise-category {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.exercise-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.community-drops {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+}
+
+.drop-color {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.drop-text {
+    font-size: 12px;
+}
+
+.info-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+
+
