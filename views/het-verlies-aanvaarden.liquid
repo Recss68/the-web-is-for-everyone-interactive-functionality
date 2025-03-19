@@ -23,7 +23,7 @@
 
   <section class="exercise-container">
   {% for exercise in exercise %}
-    <article class="exercise-card">
+    <article class="exercise-card {% if exercise.title != 'Dagboek van verlies' %}inactive{% endif %}">
       {% if exercise.title == "Dagboek van verlies" %}
         <figure class="exercise-image-container">
           <img src="https://fdnd-agency.directus.app/assets/{{ exercise.image }}?width=200&height=200" alt="Task Image" class="exercise-image">
@@ -51,4 +51,4 @@
       <p class="end-text">Einde voor vandaag</p>
   </section>
       
-{% render 'partials/foot.liquid' %}
+{% render 'partials/foot-exercise.liquid' %}
