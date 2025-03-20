@@ -6,6 +6,7 @@
     --exercise-bg: #201c1c;
     --header-bg: #0c0c0c;
     --bar-lines: #282828;
+    --input-field: #1d1d1d;
     --text-color: #fff;
     --inactive-color: #777;
 
@@ -401,10 +402,10 @@ footer {
             font-size: var(--size-xxs);
         }
         input, textarea {
-            border: 1px solid var(--gray);
+            border: 1px solid var(--input-field);
             padding: 10px;
             border-radius: 10px;
-            background: none;
+            background-color: var(--input-field);
             color: var(--gray);
         }
         button {
