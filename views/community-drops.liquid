@@ -1,5 +1,33 @@
 {% render 'partials/head.liquid' %}
 
-<h1>Current page title {{ title }} </h1>
+<section class="drops-head">
+    <div class="icon-container">
+        <button class="back-button" aria-label="Terug"><a href="/het-verlies-aanvaarden">←</a></button>
+        <h1>Community Drops</h1>
+    </div>
+    <p>
+        Deel wat je van de oefening vond, lees ervaringen van anderen en steun elkaar
+        in de reis door rouw. <strong>Je bent niet alleen.</strong>
+    </p>
+</section>
 
-{% render 'partials/foot.liquid' %}
+<section class="berichten-container">
+    <img class="gradient-left" src="assets/Het verlies aanvaarden.png">
+    <h2>Nieuwste Berichten</h2>
+
+    {% for drops in drops %}
+        {% if drops.text %}
+            <article class="bericht">
+                    <div class="bericht-info">
+                        <h3>{{ drops.from }}</h3>
+                        <p>Op {{ drops.date_created | date: "%-d %B" }}</p>
+                    </div>
+                <p class="bericht-text">
+                    {{ drops.text }}
+                </p>
+            </article>   
+        {% endif %}
+    {% endfor %}     
+</section>
+
+{% render 'partials/foot-drops.liquid' %}
