@@ -20,6 +20,9 @@ import { Liquid } from 'liquidjs';
 
 // Maak een nieuwe Express applicatie aan, waarin we de server configureren
 const app = express()
+// Voeg body-parser functionaliteit toe ( DIT EVEN VRAGEN AAN KRJN OF KOOP??? )
+app.use(express.urlencoded({ extended: true })); // Voor x-www-form-urlencoded (form data)
+app.use(express.json()); // Voor JSON data
 
 // Gebruik de map 'public' voor statische bestanden (resources zoals CSS, JavaScript, afbeeldingen en fonts)
 // Bestanden in deze map kunnen dus door de browser gebruikt worden
@@ -96,5 +99,21 @@ app.get('/community-drops', async function (request, response) {
     title: "community-drops",
     drops: dropsResponseJSON.data,
   })
+})
+
+app.post('/community-drops', async function (request, response) {
+
+  await fetch('https://fdnd-agency.directus.app/items/dropandheal_messages', {
+    method: 'POST',
+    body: JSON.stringify({
+      from: request.body.from,
+      text: request.body.text
+    }),
+    headers: {
+      'Content-Type': 'application/json;charset=UTF-8'
+    }
+  });
+
+  response.redirect(303, '/community-drops');
 })
 
