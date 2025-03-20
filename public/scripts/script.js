@@ -1,5 +1,8 @@
-const dropdownBtn = document.querySelector(".dropdown-btn");
+const popover = document.querySelector(".popover");
 
-dropdownBtn.addEventListener("click", function () {
-    this.classList.toggle("active");
+// Toggle popover bij klikken op message-btn
+document.querySelectorAll(".message-btn, .close-popover").forEach(btn => {
+    btn.addEventListener("click", () => {
+        popover.classList.toggle("active");
+    });
 });
