@@ -6,3 +6,9 @@ document.querySelectorAll(".message-btn, .close-popover").forEach(btn => {
         popover.classList.toggle("active");
     });
 });
+
+// Success state handling
+document.querySelector("form").addEventListener("submit", async function (event) {
+    event.preventDefault(); // Voorkom standaard form-verzending
+        document.querySelector('.success-message').classList.remove('inactive');
+});
