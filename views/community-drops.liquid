@@ -30,19 +30,23 @@
     <img class="gradient-left" src="assets/Het verlies aanvaarden.png">
     <h2>Nieuwste Berichten</h2>
 
-    {% for drops in drops %}
-        {% if drops.text %}
+{% if drops and drops.size > 0 %}
+    {% for drop in drops %}
+        {% if drop.text %}
             <article class="bericht">
-                    <div class="bericht-info">
-                        <h3>{{ drops.from }}</h3>
-                        <p>Op {{ drops.date_created | date: "%-d %B" }}</p>
-                    </div>
+                <div class="bericht-info">
+                    <h3>{{ drop.from }}</h3>
+                    <p>Op {{ drop.date_created | date: "%-d %B" }}</p>
+                </div>
                 <p class="bericht-text">
-                    {{ drops.text }}
+                    {{ drop.text }}
                 </p>
-            </article>   
+            </article>
         {% endif %}
-    {% endfor %}     
+    {% endfor %}
+{% else %}
+    <h3>Nog geen berichten geplaatst</h3>
+{% endif %}  
 </section>
 
 {% render 'partials/foot-drops.liquid' %}
