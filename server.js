@@ -44,7 +44,6 @@ app.get('/', async function (request, response) {
  
    // Geef hier eventueel data aan mee
    response.render('index.liquid', {
-    title: 'Kies een rouwtaak!',
      task: taskResponseJSON.data
    })
 })
