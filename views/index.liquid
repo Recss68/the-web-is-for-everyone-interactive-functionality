@@ -2,9 +2,6 @@
 
 <section class="home-list">
     <ul>
-        {% comment %} <a href="het-verlies-aanvaarden">
-        <li><img class="thumb" src="assets/Het verlies aanvaarden.png"><br>Het verlies aanvaarden</li>
-        </a> {% endcomment %}
         {% for task in task %}
          <a href="/{{ task.title | downcase | replace: ' ', '-' }}">
             <li>
