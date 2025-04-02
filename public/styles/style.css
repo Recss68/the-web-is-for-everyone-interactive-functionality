@@ -45,8 +45,26 @@ body {
     background-color: var(--background-color);
 }
 
+.home-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+}
+
 .thumb {
-    width: 5%;
+    width: 6em;
+    height: 6em; 
+    transition: transform 0.3 ease-in-out;
+    &:hover {
+        transform: scale(1.5);
+    }
 }
 
 .nav-bar {
@@ -86,6 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 15px;
     h1 {
         font-size: var(--size-sm);
     }

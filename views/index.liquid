@@ -1,9 +1,18 @@
 {% render 'partials/head.liquid' %}
 
-<ul>
-    <a href="het-verlies-aanvaarden">
-    <li><img class="thumb" src="assets/Het verlies aanvaarden.png"><br>Het verlies aanvaarden</li>
-    </a>
-</ul>
+<section class="home-list">
+    <ul>
+        {% comment %} <a href="het-verlies-aanvaarden">
+        <li><img class="thumb" src="assets/Het verlies aanvaarden.png"><br>Het verlies aanvaarden</li>
+        </a> {% endcomment %}
+        {% for task in task %}
+         <a href="/{{ task.title | downcase | replace: ' ', '-' }}">
+            <li>
+                <img class="thumb" src="assets/{{task.title}}.png">
+            </li>
+        </a>
+        {% endfor %}
+    </ul>
+</section>
 
 {% render 'partials/foot.liquid' %}
