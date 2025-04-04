@@ -91,7 +91,7 @@ app.get('/het-verlies-aanvaarden', async function (request, response) {
 // Ophalen van data voor de community drops pagina
 
 app.get('/community-drops', async function (request, response) {
-  const dropsResponse = await fetch(`https://fdnd-agency.directus.app/items/dropandheal_messages?filter={"_and":[{"from":{"_contains":"Recep_"}}]}`)
+  const dropsResponse = await fetch(`https://fdnd-agency.directus.app/items/dropandheal_messages?filter={"_and":[{"from":{"_contains":"Recep_"}}]}&sort=-date_created`)
   const dropsResponseJSON = await dropsResponse.json()
 
   response.render('community-drops.liquid', {
