@@ -16,14 +16,17 @@ Bij Drop & Heal krijgen de gebruikers de mogelijkheid om met elkaar te connecten
 
 ## Kenmerken 📚
 * Er wordt gebruik gemaakt van Directus, hier komt alle data te staan en wordt er data opgehaald die vervolgens getoond kan worden in de Front End. Om data op te halen en te posten in de database is er gebruikt gemaakt van de [GET](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/8717c18577b8f773318d578878c7857107f21812/server.js#L93-L101) en [POST](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/8717c18577b8f773318d578878c7857107f21812/server.js#L103-L117) methodes.
-* De [POST](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/8717c18577b8f773318d578878c7857107f21812/server.js#L103-L117) wordt verwerkt door een Formulier, de body data ( invoer van gebruiker ) wordt vervolgens opgehaald via de server file en plaatst dit dan in de database, waar we vervolgens doormiddel van de [GET methode](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/8717c18577b8f773318d578878c7857107f21812/server.js#L93-L101) onze data kunnen ophalen, dit geven we dan door aan de render om duidelijk te maken waar het naar toe gaat. Tot slot tonen we met gebruik van liquid in een herhalend structuur op de pagina.
+* De [POST](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/8717c18577b8f773318d578878c7857107f21812/server.js#L103-L117) wordt verwerkt door een Formulier, de body data ( invoer van gebruiker ) wordt vervolgens opgehaald in [de server file](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/main/server.js) en plaatst dit dan in de database, waar we vervolgens doormiddel van de [GET methode](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/8717c18577b8f773318d578878c7857107f21812/server.js#L93-L101) onze data kunnen ophalen, dit geven we dan door aan de render om duidelijk te maken waar het naar toe gaat. Tot slot tonen we met gebruik van [liquid](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/cab4fa2c99d0b612a530eb5e8f7b5d108065026f/views/community-drops.liquid#L38-L50) in een herhalend structuur op de pagina.
+* Ik heb gebruik gemaakt van de Empty- en Success states, deze laten content zien als er nog niks is uitgevoerd of wel is uitgevoerd. Zie afbeelding onder
+![image](https://github.com/user-attachments/assets/5e9aca0b-ddfc-4001-b8f9-0610cc6fcace)
+ 
 
 ## Ontwerpkeuzes ✏️
+Mijn ontwerpkeuze was puur gebasseerd op wat ik heb ontvangen in mijn Figma bestand ( zie voorbeelden hier onder ):
+![image](https://github.com/user-attachments/assets/db5be21b-3a50-4303-9a8c-d519747db4be)
 
-
-
-## Progressive Enhancement
-
+Ik heb wel gewerkt aan de responsiveness, we hadden geen voorbeeld in het design voor de desktop. Ik heb gebruik gemaakt van [Media Queries](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/cab4fa2c99d0b612a530eb5e8f7b5d108065026f/public/styles/style.css#L223-L230) met [verschillende breakpoints](https://github.com/Recss68/the-web-is-for-everyone-interactive-functionality/blob/cab4fa2c99d0b612a530eb5e8f7b5d108065026f/public/styles/style.css#L160-L177) zodat de content altijd gecentreerd blijft en niet uitgestrekt wordt getoond op de pagina ( zie voorbeelden hier onder ).
+![image](https://github.com/user-attachments/assets/f9ec231f-adf7-472b-bee5-8de0bf17c697)
 
 ## Instalatie
 In dit project wordt gebruik gemaakt van Express JS. 
