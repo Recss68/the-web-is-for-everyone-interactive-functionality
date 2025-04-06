@@ -3,7 +3,7 @@
 ![image](https://github.com/user-attachments/assets/114de9b0-3f2f-4c04-ba3d-8a8813728712)
 
 ## Projectdoel 🚀 
-In dit project lag de focus op het tonen van de opdrachten in de overzicht en dat de gebruiker
+In dit project lag de focus op het tonen van de opdrachten in de overzicht en dat de gebruiker zijn gevoelens kan uiten tijdens het rouwen in een community, zo kan iedereen die nog moeite heeft met rouwen inlezen hoe andere personen het hebben kunnen overwinnen, en hoe ze het hebben ervaren.
 
 ## Inleiding 
 
